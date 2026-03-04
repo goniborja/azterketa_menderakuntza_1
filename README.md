@@ -1,0 +1,1 @@
+# azterketa_menderakuntza_1
