@@ -637,7 +637,7 @@ body {
 // ══════════════════════════════════════════
 //  CONFIG
 // ══════════════════════════════════════════
-const APPS_SCRIPT_URL = "ZURE_APPS_SCRIPT_URL_HEMEN";
+const APPS_SCRIPT_URL = "https://script.google.com/a/macros/barrutialde.eus/s/AKfycbzjPJRLBr7w77tj2hOox66xGsxqfiEiRIx7Mc4vSqYSpSYCnz0Jz8k4vnHoJb_wAdipmw/exec";
 
 // ══════════════════════════════════════════
 //  ANTI-CHEAT
@@ -1016,7 +1016,7 @@ function renderResults(res, ikaslea, taldea) {
 // ══════════════════════════════════════════
 async function sendData(ikaslea, taldea, res) {
   const status = document.getElementById("send-status");
-  if (APPS_SCRIPT_URL === "ZURE_APPS_SCRIPT_URL_HEMEN") {
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("HEMEN")) {
     status.className = "send-status error";
     status.textContent = "⚠ Apps Script URL ez dago konfiguratuta.";
     return;
